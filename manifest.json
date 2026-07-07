@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Google Calendar Meet URL Cleaner",
+  "version": "0.2.0",
+  "description": "Google Calendar のコピー内容から、予定名・日時・Meet URLだけをクリップボードへ保存します。",
+  "host_permissions": ["https://calendar.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["formatter.js", "copy-trigger.js", "page-clipboard-hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

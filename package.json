@@ -1,0 +1,11 @@
+{
+  "name": "google-calendar-meet-url-cleaner",
+  "version": "0.2.0",
+  "private": false,
+  "description": "Chrome extension that cleans Google Calendar Meet URL copy text.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check formatter.js && node --check copy-trigger.js && node --check page-clipboard-hook.js && node --check content.js",
+    "package": "rm -f google-calendar-meet-url-cleaner.zip && cd .. && zip -r google-calendar-meet-url-cleaner/google-calendar-meet-url-cleaner.zip google-calendar-meet-url-cleaner/manifest.json google-calendar-meet-url-cleaner/README.md google-calendar-meet-url-cleaner/LICENSE google-calendar-meet-url-cleaner/formatter.js google-calendar-meet-url-cleaner/copy-trigger.js google-calendar-meet-url-cleaner/page-clipboard-hook.js google-calendar-meet-url-cleaner/content.js"
+  }
+}
